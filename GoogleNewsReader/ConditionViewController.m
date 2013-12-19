@@ -42,13 +42,13 @@
     UIView *blueView = [[UIView alloc] init];
     blueView.frame = CGRectMake(150, 100, 150, 200);
     blueView.backgroundColor = [UIColor blueColor];
-    [self.view addSubview:blueView];
     
     UIView *greenView = [[UIView alloc] init];
     greenView.frame = CGRectMake(120, 90, 50, 50);
     greenView.backgroundColor = [UIColor greenColor];
-    [self.view addSubview:greenView];
 
+    [self.view addSubview:greenView];
+    [self.view addSubview:blueView];
 }
 
 - (void)didReceiveMemoryWarning
