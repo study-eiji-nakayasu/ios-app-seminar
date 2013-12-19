@@ -30,25 +30,22 @@
 	// Do any additional setup after loading the view.
     
     // 背景を赤に設定
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     // 検索ボタン
     UIButton *btnSearch = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    btnSearch.frame = CGRectMake(200, 100, 100, 50);
+    btnSearch.frame = CGRectMake(200, 200, 100, 50);
     [btnSearch setTitle:@"検索ボタン" forState:UIControlStateNormal];
     [btnSearch addTarget:self action:@selector(clickBtnSearch) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btnSearch];
     
-    UIView *blueView = [[UIView alloc] init];
-    blueView.frame = CGRectMake(150, 100, 150, 200);
-    blueView.backgroundColor = [UIColor blueColor];
-    
-    UIView *greenView = [[UIView alloc] init];
-    greenView.frame = CGRectMake(120, 90, 50, 50);
-    greenView.backgroundColor = [UIColor greenColor];
-
-    [blueView addSubview:greenView];
-    [self.view addSubview:blueView];
+    UITextField *tfKeyword = [[UITextField alloc] init];
+    tfKeyword.frame = CGRectMake(30, 100, 200, 50);
+    tfKeyword.backgroundColor = [UIColor whiteColor];
+    tfKeyword.placeholder = @"キーワード";
+    tfKeyword.clearButtonMode = UITextFieldViewModeAlways;
+    tfKeyword.borderStyle = UITextBorderStyleRoundedRect;
+    [self.view addSubview:tfKeyword];
 }
 
 - (void)didReceiveMemoryWarning
