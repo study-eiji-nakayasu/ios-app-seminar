@@ -19,6 +19,7 @@
 		A5BEF51618629BDD004EB807 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BEF4FE18629BDD004EB807 /* UIKit.framework */; };
 		A5BEF51E18629BDD004EB807 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5BEF51C18629BDD004EB807 /* InfoPlist.strings */; };
 		A5BEF52018629BDD004EB807 /* GoogleNewsReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BEF51F18629BDD004EB807 /* GoogleNewsReaderTests.m */; };
+		A5BEF52E1862A21F004EB807 /* ConditionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BEF52D1862A21F004EB807 /* ConditionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		A5BEF51B18629BDD004EB807 /* GoogleNewsReaderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleNewsReaderTests-Info.plist"; sourceTree = "<group>"; };
 		A5BEF51D18629BDD004EB807 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A5BEF51F18629BDD004EB807 /* GoogleNewsReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogleNewsReaderTests.m; sourceTree = "<group>"; };
+		A5BEF52C1862A21F004EB807 /* ConditionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConditionViewController.h; sourceTree = "<group>"; };
+		A5BEF52D1862A21F004EB807 /* ConditionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConditionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 			children = (
 				A5BEF50918629BDD004EB807 /* AppDelegate.h */,
 				A5BEF50A18629BDD004EB807 /* AppDelegate.m */,
+				A5BEF52C1862A21F004EB807 /* ConditionViewController.h */,
+				A5BEF52D1862A21F004EB807 /* ConditionViewController.m */,
 				A5BEF50C18629BDD004EB807 /* Images.xcassets */,
 				A5BEF50118629BDD004EB807 /* Supporting Files */,
 			);
@@ -241,6 +246,7 @@
 			files = (
 				A5BEF50B18629BDD004EB807 /* AppDelegate.m in Sources */,
 				A5BEF50718629BDD004EB807 /* main.m in Sources */,
+				A5BEF52E1862A21F004EB807 /* ConditionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

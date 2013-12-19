@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ConditionViewController.h"
 
 @implementation AppDelegate
 
@@ -16,6 +17,13 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    ConditionViewController *vcCondition = [[ConditionViewController alloc] init];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vcCondition];
+    
+    self.window.rootViewController = navi;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
