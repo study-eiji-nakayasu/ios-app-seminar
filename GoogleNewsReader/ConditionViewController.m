@@ -7,6 +7,7 @@
 //
 
 #import "ConditionViewController.h"
+#import "NewsListViewController.h"
 
 @interface ConditionViewController ()
 
@@ -47,6 +48,8 @@
 
 - (void)clickBtnSearch
 {
+    NewsListViewController *vcNewsList = [[NewsListViewController alloc] init];
+    [self.navigationController pushViewController:vcNewsList animated:YES];
 }
 
 @end

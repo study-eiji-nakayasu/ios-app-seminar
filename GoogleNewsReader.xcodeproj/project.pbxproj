@@ -20,6 +20,7 @@
 		A5BEF51E18629BDD004EB807 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5BEF51C18629BDD004EB807 /* InfoPlist.strings */; };
 		A5BEF52018629BDD004EB807 /* GoogleNewsReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BEF51F18629BDD004EB807 /* GoogleNewsReaderTests.m */; };
 		A5BEF52E1862A21F004EB807 /* ConditionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BEF52D1862A21F004EB807 /* ConditionViewController.m */; };
+		A5BEF5311862A8FA004EB807 /* NewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BEF5301862A8FA004EB807 /* NewsListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		A5BEF51F18629BDD004EB807 /* GoogleNewsReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogleNewsReaderTests.m; sourceTree = "<group>"; };
 		A5BEF52C1862A21F004EB807 /* ConditionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConditionViewController.h; sourceTree = "<group>"; };
 		A5BEF52D1862A21F004EB807 /* ConditionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConditionViewController.m; sourceTree = "<group>"; };
+		A5BEF52F1862A8FA004EB807 /* NewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListViewController.h; sourceTree = "<group>"; };
+		A5BEF5301862A8FA004EB807 /* NewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 				A5BEF50A18629BDD004EB807 /* AppDelegate.m */,
 				A5BEF52C1862A21F004EB807 /* ConditionViewController.h */,
 				A5BEF52D1862A21F004EB807 /* ConditionViewController.m */,
+				A5BEF52F1862A8FA004EB807 /* NewsListViewController.h */,
+				A5BEF5301862A8FA004EB807 /* NewsListViewController.m */,
 				A5BEF50C18629BDD004EB807 /* Images.xcassets */,
 				A5BEF50118629BDD004EB807 /* Supporting Files */,
 			);
@@ -247,6 +252,7 @@
 				A5BEF50B18629BDD004EB807 /* AppDelegate.m in Sources */,
 				A5BEF50718629BDD004EB807 /* main.m in Sources */,
 				A5BEF52E1862A21F004EB807 /* ConditionViewController.m in Sources */,
+				A5BEF5311862A8FA004EB807 /* NewsListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +453,7 @@
 				A5BEF52518629BDD004EB807 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5BEF52618629BDD004EB807 /* Build configuration list for PBXNativeTarget "GoogleNewsReaderTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +462,7 @@
 				A5BEF52818629BDD004EB807 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
