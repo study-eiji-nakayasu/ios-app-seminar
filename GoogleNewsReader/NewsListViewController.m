@@ -30,12 +30,10 @@
     
     self.view.backgroundColor = [UIColor greenColor];
     
-    // 戻るボタン
-    UIButton *btnBack = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    btnBack.frame = CGRectMake(200, 100, 100, 50);
-    [btnBack setTitle:@"戻るボタン" forState:UIControlStateNormal];
-    [btnBack addTarget:self action:@selector(clickBtnBack) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btnBack];
+    UITableView *tblView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    tblView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:tblView];
+    [self.view sizeToFit];
     
 }
 

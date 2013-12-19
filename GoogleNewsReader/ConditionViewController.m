@@ -34,8 +34,8 @@
     
     // 検索ボタン
     UIButton *btnSearch = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    btnSearch.frame = CGRectMake(200, 200, 100, 50);
-    [btnSearch setTitle:@"検索ボタン" forState:UIControlStateNormal];
+    btnSearch.frame = CGRectMake(220, 100, 100, 50);
+    [btnSearch setTitle:@"検索" forState:UIControlStateNormal];
     [btnSearch addTarget:self action:@selector(clickBtnSearch) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btnSearch];
     
