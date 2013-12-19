@@ -38,6 +38,11 @@
     [btnSearch setTitle:@"検索ボタン" forState:UIControlStateNormal];
     [btnSearch addTarget:self action:@selector(clickBtnSearch) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btnSearch];
+    
+    UIView *blueView = [[UIView alloc] init];
+    blueView.frame = CGRectMake(100, 100, 100, 100);
+    blueView.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:blueView];
 }
 
 - (void)didReceiveMemoryWarning
