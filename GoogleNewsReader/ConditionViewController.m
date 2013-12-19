@@ -47,7 +47,7 @@
     greenView.frame = CGRectMake(120, 90, 50, 50);
     greenView.backgroundColor = [UIColor greenColor];
 
-    [self.view addSubview:greenView];
+    [blueView addSubview:greenView];
     [self.view addSubview:blueView];
 }
 
