@@ -7,6 +7,7 @@
 //
 
 #import "NewsLoader.h"
+#import "News.h"
 
 @implementation NewsLoader
 
@@ -21,7 +22,46 @@
     
     NSLog(@"%@", urlStr);
     
-    return nil; //後で消す
+    //リクエスト用のオブジェクトを生成
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    NSHTTPURLResponse *response;
+    NSError *error;
+    //今回は同期処理で
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    
+    //JSONをDictionary型に変換
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+    
+    NSDictionary *responseData = [json objectForKey:@"responseData"];
+    NSArray *resultsArray = [responseData objectForKey:@"results"];
+    
+    //Newsのインスタンスを生成
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+    
+    for (NSDictionary *resultDic in resultsArray) {
+        News *news = [[News alloc] init];
+        news.title = [resultDic objectForKey:@"titleNoFormatting"];
+        news.content = [resultDic objectForKey:@"content"];
+        news.url = [NSURL URLWithString:[resultDic objectForKey:@"unescapedUrl"]];
+        
+        NSDictionary *imageDic = [resultDic objectForKey:@"image"];
+        if (imageDic != nil) {
+            news.imageHeight = [[imageDic objectForKey:@"tbHeight"] floatValue];
+            news.imageUrl = [NSURL URLWithString:[imageDic objectForKey:@"tbUrl"]];
+            news.imageWidth = [[imageDic objectForKey:@"tbWidth"] floatValue];
+        }
+        [result addObject:news];
+    }
+    
+    
+    if (error != nil)
+    {
+        return nil;
+    }
+    
+    return result;
 }
 
 @end

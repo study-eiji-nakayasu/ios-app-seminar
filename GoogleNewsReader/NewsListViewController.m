@@ -7,6 +7,7 @@
 //
 
 #import "NewsListViewController.h"
+#import "News.h"
 #import "NewsLoader.h"
 
 @interface NewsListViewController ()
@@ -37,7 +38,11 @@
     [self.view sizeToFit];
     
     //APIを試しにたたいてみる
-    [NewsLoader load:self.keyword pageNum:1];
+    NSArray *newsArray = [NewsLoader load:self.keyword pageNum:1];
+    
+    for (News *news in newsArray) {
+        NSLog(@"%@", news.title);
+    }
     
 }
 
