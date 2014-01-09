@@ -7,6 +7,7 @@
 //
 
 #import "NewsListViewController.h"
+#import "NewsLoader.h"
 
 @interface NewsListViewController ()
 
@@ -34,6 +35,9 @@
     tblView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:tblView];
     [self.view sizeToFit];
+    
+    //APIを試しにたたいてみる
+    [NewsLoader load:self.keyword pageNum:1];
     
 }
 

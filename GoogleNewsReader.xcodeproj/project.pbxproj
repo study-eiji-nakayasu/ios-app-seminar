@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5B3066B187EAEAD00E31E27 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B3066A187EAEAD00E31E27 /* News.m */; };
+		A5B3066E187EB00600E31E27 /* NewsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B3066D187EB00600E31E27 /* NewsLoader.m */; };
 		A5BEF4FB18629BDD004EB807 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BEF4FA18629BDD004EB807 /* Foundation.framework */; };
 		A5BEF4FD18629BDD004EB807 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BEF4FC18629BDD004EB807 /* CoreGraphics.framework */; };
 		A5BEF4FF18629BDD004EB807 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BEF4FE18629BDD004EB807 /* UIKit.framework */; };
@@ -34,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A5B30669187EAEAD00E31E27 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		A5B3066A187EAEAD00E31E27 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
+		A5B3066C187EB00600E31E27 /* NewsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsLoader.h; sourceTree = "<group>"; };
+		A5B3066D187EB00600E31E27 /* NewsLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsLoader.m; sourceTree = "<group>"; };
 		A5BEF4F718629BDD004EB807 /* GoogleNewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleNewsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5BEF4FA18629BDD004EB807 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A5BEF4FC18629BDD004EB807 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -80,6 +86,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5B30667187EAE1D00E31E27 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A5BEF52C1862A21F004EB807 /* ConditionViewController.h */,
+				A5BEF52D1862A21F004EB807 /* ConditionViewController.m */,
+				A5BEF52F1862A8FA004EB807 /* NewsListViewController.h */,
+				A5BEF5301862A8FA004EB807 /* NewsListViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		A5B30668187EAE5B00E31E27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5B30669187EAEAD00E31E27 /* News.h */,
+				A5B3066A187EAEAD00E31E27 /* News.m */,
+				A5B3066C187EB00600E31E27 /* NewsLoader.h */,
+				A5B3066D187EB00600E31E27 /* NewsLoader.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		A5BEF4EE18629BDD004EB807 = {
 			isa = PBXGroup;
 			children = (
@@ -113,12 +141,10 @@
 		A5BEF50018629BDD004EB807 /* GoogleNewsReader */ = {
 			isa = PBXGroup;
 			children = (
+				A5B30668187EAE5B00E31E27 /* Model */,
+				A5B30667187EAE1D00E31E27 /* ViewController */,
 				A5BEF50918629BDD004EB807 /* AppDelegate.h */,
 				A5BEF50A18629BDD004EB807 /* AppDelegate.m */,
-				A5BEF52C1862A21F004EB807 /* ConditionViewController.h */,
-				A5BEF52D1862A21F004EB807 /* ConditionViewController.m */,
-				A5BEF52F1862A8FA004EB807 /* NewsListViewController.h */,
-				A5BEF5301862A8FA004EB807 /* NewsListViewController.m */,
 				A5BEF50C18629BDD004EB807 /* Images.xcassets */,
 				A5BEF50118629BDD004EB807 /* Supporting Files */,
 			);
@@ -249,8 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5B3066B187EAEAD00E31E27 /* News.m in Sources */,
 				A5BEF50B18629BDD004EB807 /* AppDelegate.m in Sources */,
 				A5BEF50718629BDD004EB807 /* main.m in Sources */,
+				A5B3066E187EB00600E31E27 /* NewsLoader.m in Sources */,
 				A5BEF52E1862A21F004EB807 /* ConditionViewController.m in Sources */,
 				A5BEF5311862A8FA004EB807 /* NewsListViewController.m in Sources */,
 			);

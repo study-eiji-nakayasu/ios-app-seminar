@@ -10,7 +10,9 @@
 #import "NewsListViewController.h"
 
 @interface ConditionViewController ()
-
+{
+UITextField *tfKeyword;
+}
 @end
 
 @implementation ConditionViewController
@@ -39,7 +41,7 @@
     [btnSearch addTarget:self action:@selector(clickBtnSearch) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btnSearch];
     
-    UITextField *tfKeyword = [[UITextField alloc] init];
+    tfKeyword = [[UITextField alloc] init];
     tfKeyword.frame = CGRectMake(30, 100, 200, 50);
     tfKeyword.backgroundColor = [UIColor whiteColor];
     tfKeyword.placeholder = @"キーワード";
@@ -57,6 +59,8 @@
 - (void)clickBtnSearch
 {
     NewsListViewController *vcNewsList = [[NewsListViewController alloc] init];
+    //キーワードを次の画面のインスタンスへセットする
+    vcNewsList.keyword = tfKeyword.text;
     [self.navigationController pushViewController:vcNewsList animated:YES];
 }
 
