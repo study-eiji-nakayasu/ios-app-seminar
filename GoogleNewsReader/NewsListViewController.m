@@ -61,7 +61,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+    // cellをキャッシュするときのキー
+    static NSString* cellId = @"aaa";
+    
+    // cellがキャッシュされていれば再利用する
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
+    }
     
     News* news = [newsArray objectAtIndex:indexPath.row];
     cell.textLabel.text = news.title;
