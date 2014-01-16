@@ -77,6 +77,12 @@
     cell.detailTextLabel.text = news.content;
     cell.detailTextLabel.numberOfLines = 5;
     
+    // 画像
+    if (news.imageUrl != nil) {
+        NSData* data = [NSData dataWithContentsOfURL:news.imageUrl];
+        cell.imageView.image = [[UIImage alloc] initWithData:data];        
+    }
+    
     return cell;
 }
 
