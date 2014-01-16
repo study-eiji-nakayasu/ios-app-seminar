@@ -10,7 +10,9 @@
 #import "News.h"
 #import "NewsLoader.h"
 
-@interface NewsListViewController ()
+@interface NewsListViewController () {
+    NSArray* newsArray;
+}
 
 @end
 
@@ -33,18 +35,40 @@
     self.view.backgroundColor = [UIColor greenColor];
     
     UITableView *tblView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    tblView.backgroundColor = [UIColor whiteColor];
+    tblView.delegate = self;
+    tblView.dataSource = self;
+    
     [self.view addSubview:tblView];
     [self.view sizeToFit];
     
-    //APIを試しにたたいてみる
-    NSArray *newsArray = [NewsLoader load:self.keyword pageNum:1];
+    //APIを叩いてニュースを取得する
+    newsArray = [NewsLoader load:self.keyword pageNum:1];
     
     for (News *news in newsArray) {
         NSLog(@"%@", news.title);
     }
     
 }
+
+// セクション毎の行数を返す
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (newsArray == nil) {
+        return 0;
+    }
+    return newsArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cell"];
+    
+    News* news = [newsArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = news.title;
+    
+    return cell;
+}
+
 
 - (void)didReceiveMemoryWarning
 {
