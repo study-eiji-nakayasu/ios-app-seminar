@@ -71,7 +71,10 @@
     }
     
     News* news = [newsArray objectAtIndex:indexPath.row];
+    
+    // セルの中身をセット
     cell.textLabel.text = news.title;
+    cell.detailTextLabel.text = news.content;
     
     return cell;
 }
