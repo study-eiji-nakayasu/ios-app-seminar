@@ -75,12 +75,13 @@
     // セルの中身をセット
     cell.textLabel.text = news.title;
     cell.detailTextLabel.text = news.content;
+    cell.detailTextLabel.numberOfLines = 5;
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100;
+    return 150;
 }
 
 
