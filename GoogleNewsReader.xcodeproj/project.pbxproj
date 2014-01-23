@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A59231331891237900BA5C38 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59231321891237900BA5C38 /* DetailViewController.m */; };
 		A5B3066B187EAEAD00E31E27 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B3066A187EAEAD00E31E27 /* News.m */; };
 		A5B3066E187EB00600E31E27 /* NewsLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B3066D187EB00600E31E27 /* NewsLoader.m */; };
 		A5BEF4FB18629BDD004EB807 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BEF4FA18629BDD004EB807 /* Foundation.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A59231311891237900BA5C38 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		A59231321891237900BA5C38 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		A5B30669187EAEAD00E31E27 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
 		A5B3066A187EAEAD00E31E27 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
 		A5B3066C187EB00600E31E27 /* NewsLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsLoader.h; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 				A5BEF52D1862A21F004EB807 /* ConditionViewController.m */,
 				A5BEF52F1862A8FA004EB807 /* NewsListViewController.h */,
 				A5BEF5301862A8FA004EB807 /* NewsListViewController.m */,
+				A59231311891237900BA5C38 /* DetailViewController.h */,
+				A59231321891237900BA5C38 /* DetailViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				A5B3066E187EB00600E31E27 /* NewsLoader.m in Sources */,
 				A5BEF52E1862A21F004EB807 /* ConditionViewController.m in Sources */,
 				A5BEF5311862A8FA004EB807 /* NewsListViewController.m in Sources */,
+				A59231331891237900BA5C38 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

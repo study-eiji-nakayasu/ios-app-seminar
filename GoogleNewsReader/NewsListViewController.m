@@ -9,6 +9,7 @@
 #import "NewsListViewController.h"
 #import "News.h"
 #import "NewsLoader.h"
+#import "DetailViewController.h"
 
 @interface NewsListViewController () {
     NSArray* newsArray;
@@ -106,7 +107,10 @@
 {
     News* news = [newsArray objectAtIndex:indexPath.row];
     NSLog(@"%@", news.title);
-
+    
+    DetailViewController* vcDetail = [[DetailViewController alloc] init];
+    [self.navigationController pushViewController:vcDetail animated:YES];
+    
 }
 
 @end
