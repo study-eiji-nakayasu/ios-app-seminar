@@ -42,7 +42,7 @@ int const TOOL_BAR_HEIGHT = 48;
     [self.view addSubview:toolbar];
     
     // 戻るボタン
-    UIBarButtonItem* btnBack = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:10 target:self action:@selector(clickBtnBack)];
+    UIBarButtonItem* btnBack = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:101 target:self action:@selector(clickBtnBack)];
     btnBack.enabled = NO;
     
     NSArray* btnArray = [NSArray arrayWithObjects:btnBack, nil];
@@ -57,12 +57,12 @@ int const TOOL_BAR_HEIGHT = 48;
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    NSLog(@"%@", @"読み込み完了");
+    ((UIBarButtonItem*)[toolbar.items objectAtIndex:0]).enabled = webView.canGoBack;
 }
 
 - (void)clickBtnBack
 {
-    
+    [webView goBack];
 }
 
 - (void)didReceiveMemoryWarning
