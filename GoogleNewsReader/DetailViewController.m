@@ -49,11 +49,16 @@ int const TOOL_BAR_HEIGHT = 48;
     UIBarButtonItem* btnForward = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:102 target:self action:@selector(clickBtnForward)];
     btnForward.enabled = NO;
     
+    // 更新ボタン
+    UIBarButtonItem* btnReload = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(clickBtnReload)];
+    btnForward.enabled = NO;
+
+    
     // スペース
     UIBarButtonItem* space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     btnForward.enabled = NO;
     
-    NSArray* btnArray = [NSArray arrayWithObjects:btnBack, space, btnForward, nil];
+    NSArray* btnArray = [NSArray arrayWithObjects:btnBack, space, btnForward, space, btnReload, space, nil];
 
     toolbar.items = btnArray;
     
@@ -78,6 +83,10 @@ int const TOOL_BAR_HEIGHT = 48;
 - (void)clickBtnForward
 {
     [webView goForward];
+}
+- (void)clickBtnReload
+{
+    [webView reload];
 }
 
 - (void)didReceiveMemoryWarning
