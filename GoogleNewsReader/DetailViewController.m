@@ -8,7 +8,9 @@
 
 #import "DetailViewController.h"
 
-@interface DetailViewController ()
+@interface DetailViewController (){
+    UIWebView* webView;
+}
 
 @end
 
@@ -26,7 +28,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    // webViewを生成
+    webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:webView];
+    
+    NSURLRequest* request = [NSURLRequest requestWithURL:self.url];
+    
+    [webView loadRequest:request];
 }
 
 - (void)didReceiveMemoryWarning

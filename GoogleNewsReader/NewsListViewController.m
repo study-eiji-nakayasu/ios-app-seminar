@@ -109,6 +109,7 @@
     NSLog(@"%@", news.title);
     
     DetailViewController* vcDetail = [[DetailViewController alloc] init];
+    vcDetail.url = news.url;
     [self.navigationController pushViewController:vcDetail animated:YES];
     
 }
