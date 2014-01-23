@@ -34,16 +34,35 @@ int const TOOL_BAR_HEIGHT = 48;
     
     // webViewを生成
     webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    webView.delegate = self;
     [self.view addSubview:webView];
     
     // toolbarを生成
     toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - TOOL_BAR_HEIGHT, self.view.frame.size.width, TOOL_BAR_HEIGHT)];
     [self.view addSubview:toolbar];
     
+    // 戻るボタン
+    UIBarButtonItem* btnBack = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:10 target:self action:@selector(clickBtnBack)];
+    btnBack.enabled = NO;
+    
+    NSArray* btnArray = [NSArray arrayWithObjects:btnBack, nil];
+    toolbar.items = btnArray;
+    
+    
     // NSURLRequestを生成
     NSURLRequest* request = [NSURLRequest requestWithURL:self.url];
     
     [webView loadRequest:request];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    NSLog(@"%@", @"読み込み完了");
+}
+
+- (void)clickBtnBack
+{
+    
 }
 
 - (void)didReceiveMemoryWarning
