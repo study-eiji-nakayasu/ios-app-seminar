@@ -10,11 +10,14 @@
 
 @interface DetailViewController (){
     UIWebView* webView;
+    UIToolbar* toolbar;
 }
 
 @end
 
 @implementation DetailViewController
+
+int const TOOL_BAR_HEIGHT = 48;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +36,11 @@
     webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:webView];
     
+    // toolbarを生成
+    toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - TOOL_BAR_HEIGHT, self.view.frame.size.width, TOOL_BAR_HEIGHT)];
+    [self.view addSubview:toolbar];
+    
+    // NSURLRequestを生成
     NSURLRequest* request = [NSURLRequest requestWithURL:self.url];
     
     [webView loadRequest:request];
