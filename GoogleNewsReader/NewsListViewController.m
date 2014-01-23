@@ -104,7 +104,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%ld", (long)indexPath.row);
+    News* news = [newsArray objectAtIndex:indexPath.row];
+    NSLog(@"%@", news.title);
+
 }
 
 @end
