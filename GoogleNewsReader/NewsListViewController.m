@@ -102,4 +102,9 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%ld", (long)indexPath.row);
+}
+
 @end
